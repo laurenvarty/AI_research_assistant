@@ -1,6 +1,9 @@
+# summariser.py
+
 from llm import ask_llm
 
-
+# Summarises the text, could be used to summarise the entire PDF or just the retrieved chunks
+# Possible adaptation for investment memo summarisation
 def summarise(text):
 
     prompt = f"""

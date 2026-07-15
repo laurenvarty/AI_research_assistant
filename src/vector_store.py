@@ -1,7 +1,9 @@
+# vector_store.py
+
 import faiss
 import numpy as np
 
-
+#makes pdf searchable
 def create_vector_store(embeddings):
 
     dimension = embeddings.shape[1]
@@ -11,4 +13,3 @@ def create_vector_store(embeddings):
     index.add(np.array(embeddings))
 
     return index
-#makes pdf searchable

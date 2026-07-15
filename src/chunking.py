@@ -1,10 +1,11 @@
+# chunking.py
+
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
 def chunk_pages(pages):
 
-    # Split documents into smaller pieces
-    # so the embedding model can search them effectively
+    # Splits the text into chunks of 800 characters with 150 characters of overlap for context
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=800,
         chunk_overlap=150
@@ -17,7 +18,6 @@ def chunk_pages(pages):
     # Loop through every PDF page
     for page in pages:
 
-        # Split this page's text into chunks
         page_chunks = splitter.split_text(
             page["text"]
         )
