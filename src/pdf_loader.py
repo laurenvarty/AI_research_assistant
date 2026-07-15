@@ -1,3 +1,5 @@
+# pdf_loader.py
+
 import fitz  # PyMuPDF
 
 
@@ -13,14 +15,14 @@ def extract_pages(uploaded_file):
     pages = []
 
 
-    # Go through each page
+    # Go through each page extracting text and saving page number
     for page_number, page in enumerate(document):
 
-        # Extract text from this page
+        
         text = page.get_text()
 
 
-        # Save text + page number
+        
         pages.append(
             {
                 "text": text,

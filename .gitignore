@@ -5,3 +5,10 @@ data/pdfs/*
 !.gitkeep
 .streamlit/
 .DS_Store
+
+#cd "/Users/lauren/AI research assistant"
+#source .venv/bin/activate
+#conda deactivate
+#streamlit run app.py
+
+#deactivate

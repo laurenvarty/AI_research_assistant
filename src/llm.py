@@ -1,9 +1,11 @@
+# llm.py
+
 from openai import OpenAI
 
 from config import OPENAI_API_KEY
 
 
-# Create OpenAI client
+# Create OpenAI client and set up API key
 client = OpenAI(
     api_key=OPENAI_API_KEY
 )
@@ -13,7 +15,7 @@ def ask_llm(question, context):
 
     response = client.chat.completions.create(
 
-        # Cheap model suitable for this project
+        # Cheap model suitable for this project as many test runs to come
         model="gpt-4.1-mini",
 
         messages=[

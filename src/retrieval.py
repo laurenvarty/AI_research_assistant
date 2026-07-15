@@ -12,4 +12,4 @@ def retrieve(query, index, chunks, k=4):
     results = [chunks[i] for i in indices[0]]
 
     return results
-    
+#retrieves asked for chunks of text from the pdf
